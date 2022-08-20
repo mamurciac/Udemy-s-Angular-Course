@@ -1,9 +1,11 @@
-function saludar(nombre : string){
-  console.table("Hola " + nombre); //Salida esperada: Hola Logan
-}
+(function(){
+  function saludar(nombre : string){
+    console.table("Hola " + nombre); //Salida esperada: Hola Logan
+  }
 
-const wolverine = {
-  nombre: "Logan"
-};
+  const wolverine = {
+    nombre: "Logan"
+  };
 
-saludar(wolverine.nombre);
+  saludar(wolverine.nombre);
+})();
