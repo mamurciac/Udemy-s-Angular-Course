@@ -1,47 +1,61 @@
-(()=>{
+(() => {
+    const nombre = "Ricardo Tapia";
+    const edad = 23;
 
-    // Uso de Let y Const
-    var nombre = 'Ricardo Tapia';
-    var edad = 23;
-  
-    var PERSONAJE = {
-      nombre: nombre,
-      edad: edad
+    const personaje = {
+        nombre: nombre,
+        edad: edad
     };
-  
-  
-    // Cree una interfaz que sirva para validar el siguiente objeto
-    var batman = {
-      nombre: 'Bruno Díaz',
-      artesMarciales: ['Karate','Aikido','Wing Chun','Jiu-Jitsu']
+
+    //Se crea una interfaz que para validar un objeto
+    interface Batman{
+        nombre: string;
+        artesMarciales: string[];
     }
-  
-    // Convertir esta funcion a una funcion de flecha
-    function resultadoDoble( a, b ){
-      return (a + b) * 2
+    //var batman = {
+    //    nombre: 'Bruno Díaz',
+    //    artesMarciales: ['Karate','Aikido','Wing Chun','Jiu-Jitsu']
+    //}
+    const batman: Batman = {
+        nombre: "Bruno Díaz",
+        artesMarciales: ["Karate", "Aikido", "Wing Chun", "Jiu-Jitsu"]
     }
+    
+    //Se convierte esta función en una función con el tipado estricto y en una función de flecha
+    //function dobleSumaNumeros1(a, b){
+    //    return (a + b) * 2;
+    //}
+    function dobleSumaNumeros2(numero1: number, numero2: number): number{
+        return 2 * (numero1 + numero2);
+    }
+    const dobleSumaNumeros3 = (numero1: number, numero2: number): number => 2 * (numero1 + numero2);
   
-    // Función con parametros obligatorios, opcionales y por defecto
-    // donde NOMBRE = obligatorio
-    //       PODER  = opcional
-    //       ARMA   = por defecto = 'arco'
-    function getAvenger( nombre, poder, arma ){
-      var mensaje;
-      if( poder ){
-        mensaje = nombre + ' tiene el poder de: ' + poder + ' y un arma: ' + arma;
-      }else{
-        mensaje = nombre + ' tiene un ' + poder
-      }
-    };
-  
-    // Cree una clase que permita manejar la siguiente estructura
-    // La clase se debe de llamar rectangulo,
-    // debe de tener dos propiedades:
-    //   * base
-    //   * altura
-    // También un método que calcule el área  =  base * altura,
-    // ese método debe de retornar un numero.
-  
-  
-  
-  })();
+    //Para la siguiente función, se establece el primer parámetro como obligatorio, el segundo parámetro como opcional y el tercer parámetro con valor por defecto "Arco"
+    //function getAvenger(nombre, poder, arma:string){
+    //    let mensaje;
+    //    if(poder){
+    //        mensaje = nombre + ' tiene el poder de: ' + poder + ' y un arma: ' + arma;
+    //    }else{
+    //        mensaje = nombre + ' tiene un ' + poder;
+    //    }
+    //}
+    function getAvenger(nombre: string, poder?: string, arma:string = "Arco"): string{
+        let mensaje;
+        if(poder != undefined){
+            mensaje = nombre + ' tiene el poder de: ' + poder + ' y un arma: ' + arma;
+        }else{
+            mensaje = nombre + ' tiene un ' + poder;
+        }
+        return mensaje;
+    }
+    
+    //Se crea una clase que permita manejar un tipo de dato llamado Rectangulo, esta tiene como propiedades la base y la altura, además de un método que retorne el área de la figura
+    class Rectangulo{
+        constructor(public valorBase: number, public valorAltura: number){}
+
+        calcularArea1(){
+            return this.valorBase * this.valorAltura;
+        }
+        calcularArea2 = () => this.valorBase * this.valorAltura;
+    }
+})();
