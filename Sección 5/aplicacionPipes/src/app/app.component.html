@@ -18,11 +18,61 @@
                 </tr>
                 <tr>
                     <td>{{nombre}}</td>
-                    <td>Uppercase</td>
+                    <td>Lowercase</td>
                     <td>{{nombre | lowercase}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Slice:3</td>
+                    <td>{{nombre | slice:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Slice:0:3</td>
+                    <td>{{nombre | slice:0:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{arreglo}}</td>
+                    <td>Slice:1:5</td>
+                    <td>{{arreglo | slice:1:5}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number</td>
+                    <td>{{numeroPi | number}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'1.0-0'</td>
+                    <td>{{numeroPi | number:'1.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'3.0-0'</td>
+                    <td>{{numeroPi | number:'3.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'.0-2'</td>
+                    <td>{{numeroPi | number:'.0-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{porcentaje}}</td>
+                    <td>Percent</td>
+                    <td>{{porcentaje | percent}}</td>
+                </tr>
+                <tr>
+                    <td>{{porcentaje}}</td>
+                    <td>Percent:'2.2-2'</td>
+                    <td>{{porcentaje | percent:'2.2-2'}}</td>
                 </tr>
             </tbody>
 
         </table>
+
+        <h4>Slice</h4>
+        <ul>
+            <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
+        </ul>
     </div>
 </div>
