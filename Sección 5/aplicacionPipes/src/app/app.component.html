@@ -140,11 +140,20 @@
                     <td>{{fecha}}</td>
                     <td>Date:'MMMM - dd':'':'{{idioma}}'
                         <br>
-                        <button (click)="idioma='es'" class="mr-1 btn btn-primary">Español</button>
-                        <button (click)="idioma='en'" class="mr-1 btn btn-secondary">Inglés</button>
-                        <button (click)="idioma='fr'" class="mr-1 btn btn-success">Francés</button>
+                        <button (click)="idioma = 'es'" class="mr-1 btn btn-primary">Español</button>
+                        <button (click)="idioma = 'en'" class="mr-1 btn btn-secondary">Inglés</button>
+                        <button (click)="idioma = 'fr'" class="mr-1 btn btn-success">Francés</button>
                     </td>
                     <td>{{fecha | date:'MMMM - dd':'':idioma}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>contraseña: {{seMuestraContrasena}}
+                        <br>
+                        <button (click)="seMuestraContrasena = !seMuestraContrasena" class="mr-1 btn btn-primary">Activar/Desactivar</button>
+                    </td>
+                    <td>{{nombre}}</td>
                 </tr>
             </tbody>
         </table>
