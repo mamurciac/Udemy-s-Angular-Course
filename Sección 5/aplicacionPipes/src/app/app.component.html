@@ -1,0 +1,183 @@
+<h1 class="mt-3">Pipes <small>Angular</small></h1>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Variable</th>
+                    <th>Pipe Usado</th>
+                    <th>Salida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Uppercase</td>
+                    <td>{{nombre | uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombreCompleto}}</td>
+                    <td>Capitalizado:true (Pipe Personalizado)</td>
+                    <td>{{nombreCompleto | capitalizado:true}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombreCompleto}}</td>
+                    <td>Capitalizado:false (Pipe Personalizado)</td>
+                    <td>{{nombreCompleto | capitalizado:false}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Lowercase</td>
+                    <td>{{nombre | lowercase}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Slice:3</td>
+                    <td>{{nombre | slice:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>Slice:0:3</td>
+                    <td>{{nombre | slice:0:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{arreglo}}</td>
+                    <td>Slice:1:5</td>
+                    <td>{{arreglo | slice:1:5}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number</td>
+                    <td>{{numeroPi | number}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'1.0-0'</td>
+                    <td>{{numeroPi | number:'1.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'3.0-0'</td>
+                    <td>{{numeroPi | number:'3.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{numeroPi}}</td>
+                    <td>Number:'.0-2'</td>
+                    <td>{{numeroPi | number:'.0-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{porcentaje}}</td>
+                    <td>Percent</td>
+                    <td>{{porcentaje | percent}}</td>
+                </tr>
+                <tr>
+                    <td>{{porcentaje}}</td>
+                    <td>Percent:'2.2-2'</td>
+                    <td>{{porcentaje | percent:'2.2-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency</td>
+                    <td>{{salario | currency}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'CAD':'symbol-narrow'</td>
+                    <td>{{salario | currency:'CAD':'symbol-narrow'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'CAD $':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'CAD $':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'LMP ':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'LMP ':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'COP ':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'COP ':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{valorPromesa}}</td>
+                    <td>Async</td>
+                    <td>{{valorPromesa | async}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td>{{fecha | date}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'medium'</td>
+                    <td>{{fecha | date:'medium'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'short'</td>
+                    <td>{{fecha | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd'</td>
+                    <td>{{fecha | date:'MMMM - dd'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd':'':'en'</td>
+                    <td>{{fecha | date:'MMMM - dd':'':'en'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd':'':'fr'</td>
+                    <td>{{fecha | date:'MMMM - dd':'':'fr'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd':'':'{{idioma}}'
+                        <br>
+                        <button (click)="idioma = 'es'" class="mr-1 btn btn-primary">Español</button>
+                        <button (click)="idioma = 'en'" class="mr-1 btn btn-secondary">Inglés</button>
+                        <button (click)="idioma = 'fr'" class="mr-1 btn btn-success">Francés</button>
+                    </td>
+                    <td>{{fecha | date:'MMMM - dd':'':idioma}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>mostrarContraseña: {{seMuestraContrasena}}
+                        <br>
+                        <button (click)="seMuestraContrasena = !seMuestraContrasena" class="mr-1 btn btn-primary">Activar/Desactivar</button>
+                    </td>
+                    <td>{{nombre | mostrarContrasena:seMuestraContrasena}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Slice</h4>
+        <ul>
+            <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
+        </ul>
+
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>{{heroe | json}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="mt-4">Domseguro</h3>
+<hr>
+
+<div class="row mb-5">
+    <div class="col">
+        <iframe width="560" height="315" [src]="videoUrl | domSeguro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
