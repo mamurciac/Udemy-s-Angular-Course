@@ -103,18 +103,28 @@
                 </tr>
                 <tr>
                     <td>{{fecha}}</td>
-                    <td>Date</td>
+                    <td>Date:'medium'</td>
                     <td>{{fecha | date:'medium'}}</td>
                 </tr>
                 <tr>
                     <td>{{fecha}}</td>
-                    <td>Date</td>
+                    <td>Date:'short'</td>
                     <td>{{fecha | date:'short'}}</td>
                 </tr>
                 <tr>
                     <td>{{fecha}}</td>
-                    <td>Date</td>
+                    <td>Date:'MMMM - dd'</td>
                     <td>{{fecha | date:'MMMM - dd'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd':'':'en'</td>
+                    <td>{{fecha | date:'MMMM - dd':'':'en'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date:'MMMM - dd':'':'fr'</td>
+                    <td>{{fecha | date:'MMMM - dd':'':'fr'}}</td>
                 </tr>
             </tbody>
         </table>
