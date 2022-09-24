@@ -91,8 +91,32 @@
                     <td>Currency:'COP ':'symbol':'.0-0'</td>
                     <td>{{salario | currency:'COP ':'symbol':'.0-0'}}</td>
                 </tr>
+                <tr>
+                    <td>{{valorPromesa}}</td>
+                    <td>Async</td>
+                    <td>{{valorPromesa | async}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td>{{fecha | date}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td>{{fecha | date:'medium'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td>{{fecha | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td>{{fecha | date:'MMMM - dd'}}</td>
+                </tr>
             </tbody>
-
         </table>
 
         <h4>Slice</h4>
