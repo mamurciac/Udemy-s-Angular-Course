@@ -149,11 +149,11 @@
 
                 <tr>
                     <td>{{nombre}}</td>
-                    <td>contraseña: {{seMuestraContrasena}}
+                    <td>mostrarContraseña: {{seMuestraContrasena}}
                         <br>
                         <button (click)="seMuestraContrasena = !seMuestraContrasena" class="mr-1 btn btn-primary">Activar/Desactivar</button>
                     </td>
-                    <td>{{nombre}}</td>
+                    <td>{{nombre | mostrarContrasena:seMuestraContrasena}}</td>
                 </tr>
             </tbody>
         </table>
