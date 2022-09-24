@@ -66,6 +66,31 @@
                     <td>Percent:'2.2-2'</td>
                     <td>{{porcentaje | percent:'2.2-2'}}</td>
                 </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency</td>
+                    <td>{{salario | currency}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'CAD':'symbol-narrow'</td>
+                    <td>{{salario | currency:'CAD':'symbol-narrow'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'CAD $':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'CAD $':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'LMP ':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'LMP ':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>Currency:'COP ':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'COP ':'symbol':'.0-0'}}</td>
+                </tr>
             </tbody>
 
         </table>
@@ -74,5 +99,13 @@
         <ul>
             <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
         </ul>
+
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>{{heroe | json}}</pre>
+            </div>
+        </div>
     </div>
 </div>
