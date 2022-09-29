@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SpotifyService {
 
-  constructor() { }
+  constructor(){
+    console.log('Servicio de Spotify listo para usar!!!');
+  }
 }
