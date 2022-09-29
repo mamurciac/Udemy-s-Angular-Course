@@ -1,6 +1,12 @@
+Se indica la forma de solicitar el token de autenticación a Spotify (Las credenciales son dadas en el curso para quienes no tienen su cuenta registrada en Spotify)
 Método HTTP: POST
-Link: https://accounts.spotify.com/api/token
-Se colocan la información adicional al body de la petición en formato x-www-form-urlencoded:
+URL: https://accounts.spotify.com/api/token
+Se coloca la información adicional en el body de la petición en formato x-www-form-urlencoded:
 grant_type: client_credentials
 client_id: d6b55734aa3f4b49af89ae8023b6c69e
 client_secret: 4659ca881ead4eed81c45197f071db34
+
+Método HTTP: GET
+URL: https://api.spotify.com/v1/browse/new-releases
+Se coloca la información adicional en el header de la petición
+Authorization: BEARER <TOKEN GENERADO POR POSTMAN>
