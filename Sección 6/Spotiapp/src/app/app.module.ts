@@ -12,6 +12,8 @@ import { SearchComponent } from './components/search/search.component';
 
 //Se importan las rutas
 import {ROUTES} from './app.routes';
+
+//Se importan los pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 
 @NgModule({
