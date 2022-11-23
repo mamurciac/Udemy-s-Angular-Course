@@ -1,3 +1,6 @@
+#Actualizacion de repositorios de Ubuntu
+sudo apt-get update && sudo apt-get upgrade
+
 #Instalacion de paquetes requeridos
 sudo apt-get install curl gnupg2 gnupg -y
 
@@ -54,3 +57,4 @@ nvm uninstall --lts
 
 #Referencias: https://es.linuxcapable.com/how-to-install-node-js-npm-on-ubuntu-22-04-lts/
 #Referencias: https://es.quora.com/C%C3%B3mo-desinstalar-completamente-Node-js-y-reinstalar-la-%C3%BAltima-versi%C3%B3n-de-Node-js
+
